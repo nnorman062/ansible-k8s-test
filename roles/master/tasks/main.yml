@@ -1,7 +1,7 @@
 ---
-- name: Reset kubeadm before init in case this is not the first run
-  command: kubeadm reset
-  when: kubeadm_reset_before_init
+#- name: Reset kubeadm before init in case this is not the first run
+#  command: kubeadm reset
+#  when: kubeadm_reset_before_init
   
 - name: kubeadm init with pre generated token
   command: kubeadm init --token {{ kubeadm_token }} --service-cidr 10.96.0.0/12
