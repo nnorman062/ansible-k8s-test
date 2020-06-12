@@ -1,7 +1,7 @@
 
 kubeadm_token: db85f7.cff657b31b20eed5
 
-master_ip: "{{ hostvars["{{ master_host }}"]['ansible_eth0']['ipv4']['address'] }}"
+master_ip: "{{ master_ipv4 }}"
 
 kubeadm_reset_before_init: true
 
