@@ -18,7 +18,6 @@
     - docker
     - kubeadm
     - master
-    - contiv
 
 - name: Install nodes
   remote_user: "{{ ansible_remote_user }}"
