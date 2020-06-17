@@ -13,7 +13,7 @@
     timeout: 300
 
 - name: deploy flannel cli plugins
-  command: kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+  command: " kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml "
 
 - pause:
     minutes: 3
