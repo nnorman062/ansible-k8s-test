@@ -12,12 +12,6 @@
     delay: 10
     timeout: 300
 
-- name: deploy flannel cli plugins
-  command: " kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml "
-
-- pause:
-    minutes: 3
-
 - name: taint master node
   command: kubectl --kubeconfig /etc/kubernetes/admin.conf taint nodes --all node-role.kubernetes.io/master-
 
@@ -50,4 +44,9 @@
 
 - pause:
     minutes: 3
-    prompt: "Make sure network pods are started"
+
+- name: deploy flannel cli plugins
+  command: " kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml "
+
+- pause:
+    minutes: 3
